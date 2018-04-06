@@ -32,7 +32,6 @@ class Application
     end
 
     if req.path.match(/add/)
-      binding.pry
 
       # added_item = @@items[0]
       # @@cart << added_item
