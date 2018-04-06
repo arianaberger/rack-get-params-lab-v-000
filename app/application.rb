@@ -1,3 +1,5 @@
+
+
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -38,6 +40,7 @@ class Application
 
       if @@items.include?(item)
         @@cart << item
+        binding.pry
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"
