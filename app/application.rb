@@ -34,7 +34,7 @@ class Application
       add_item = req.params["item"] #the key is not 'q' but 'item' in this case
 
       if @@items.include?(add_item)
-        @@cart << search_term
+        @@cart << add_item
         resp.write "added #{add_item}"
       else
         resp.write "We don't have that item!"
