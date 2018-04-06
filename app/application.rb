@@ -18,7 +18,6 @@ class Application
       resp.write handle_search(search_term)
     else
       resp.write "Path Not Found"
-      binding.pry
 
     end
 
@@ -33,6 +32,8 @@ class Application
     end
 
     if req.path.match(/add/)
+      binding.pry
+
       # added_item = @@items[0]
       # @@cart << added_item
 
