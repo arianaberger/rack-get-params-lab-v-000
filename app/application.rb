@@ -39,13 +39,10 @@ class Application
       if @@items.include?(search_term)
 
         @@cart << search_term[:q]
-        binding.pry
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"
       end
-    else
-      resp.write "Path Not Found"
 
     else
       resp.write "Path Not Found"
