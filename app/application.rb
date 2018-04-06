@@ -39,11 +39,11 @@ class Application
 
     # elsif req.path.match(/search/)
 
-      item = req.params["q"]
+      search_term = req.params["q"]
 
-      if @@items.include?(item)
+      if @@items.include?(search_term)
 
-        @@cart << item
+        @@cart << search_term[:q]
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"
