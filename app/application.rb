@@ -29,8 +29,8 @@ class Application
     end
 
     if req.path.match(/add/)
-      added_item = @@items[0]
-      @@cart << added_item
+      # added_item = @@items[0]
+      # @@cart << added_item
 
     elsif req.path.match(/search/)
 
