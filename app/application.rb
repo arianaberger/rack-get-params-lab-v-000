@@ -26,12 +26,9 @@ class Application
         resp.write "#{item}\n"
       end
     elsif
-      resp.write "Your cart is empty"
-    else
-      resp.write "Path Not Found"
-    end
+      resp.write "Your cart is empty"    
 
-    if req.path.match(/add/)
+    elsif req.path.match(/add/)
 
       # added_item = @@items[0]
       # @@cart << added_item
@@ -49,6 +46,10 @@ class Application
       end
     else
       resp.write "Path Not Found"
+
+    else
+      resp.write "Path Not Found"
+      
     end
     resp.finish
   end
