@@ -36,8 +36,8 @@ class Application
 
       item = req.params["q"]
 
-      if @@cart.include?(search_term)
-        resp.write "added #{added_item}"
+      if @@cart.include?(item)
+        resp.write "added #{item}"
       else
         resp.write "We don't have that item"
       end
