@@ -31,11 +31,11 @@ class Application
 
     elsif req.path.match(/add/)
 
-      search_term = req.params["item"] #the key is not 'q' but 'item' in this case
+      add_item = req.params["item"] #the key is not 'q' but 'item' in this case
 
-      if @@items.include?(search_term)
+      if @@items.include?(add_item)
         @@cart << search_term
-        resp.write "added #{search_term}"
+        resp.write "added #{add_item}"
       else
         resp.write "We don't have that item!"
       end
