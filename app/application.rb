@@ -34,7 +34,7 @@ class Application
 
     elsif req.path.match(/search/)
 
-      search_term = req.params["q"]
+      item = req.params["q"]
 
       if @@cart.include?(search_term)
         resp.write "added #{added_item}"
