@@ -39,8 +39,9 @@ class Application
       item = req.params["q"]
 
       if @@items.include?(item)
-        @@cart << item
         binding.pry
+
+        @@cart << item
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"
