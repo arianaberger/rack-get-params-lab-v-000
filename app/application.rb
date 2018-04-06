@@ -25,7 +25,7 @@ class Application
         resp.write "#{item}\n"
       end
     elsif
-      resp.write "Your cart is empty"    
+      resp.write "Your cart is empty"
 
     elsif req.path.match(/add/)
 
@@ -50,7 +50,7 @@ class Application
     else
       resp.write "Path Not Found"
     end
-    
+
     resp.finish
   end
 
