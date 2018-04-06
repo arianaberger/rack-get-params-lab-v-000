@@ -18,6 +18,8 @@ class Application
       resp.write handle_search(search_term)
     else
       resp.write "Path Not Found"
+      binding.pry
+
     end
 
     if req.path.match(/cart/) && !@@cart.empty?
@@ -39,7 +41,6 @@ class Application
       item = req.params["q"]
 
       if @@items.include?(item)
-        binding.pry
 
         @@cart << item
         resp.write "added #{item}"
